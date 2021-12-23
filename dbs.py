@@ -24,7 +24,8 @@ async def on_ready():
 
 @bot.command(name='information',description='Sends info on the bot.')
 async def _information(ctx):
-    embed = interactions.Embed(title='discord-interactions | python',description='by <@!327807253052653569>\n[Github Page](https://github.com/Duzos/DuBot-Slash)\n[Support Server](https://discord.gg/Raakw6367z)')
+    embed = interactions.Embed(title='discord-interactions',description='by <@!327807253052653569>\n[Github Page](https://github.com/Duzos/dbs-new)\n[Support Server](https://discord.gg/Raakw6367z)',thumbnail=interactions.EmbedImageStruct(url='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png')._json,color=0xFF6E00)
+    await ctx.send(embeds=[embed])
 
 @bot.command(type=interactions.ApplicationCommandType.USER,name='Get Avatar')
 async def _getavatar(ctx: interactions.CommandContext):
